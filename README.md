@@ -5,6 +5,8 @@ Btech Undergrad IIT Hyderabad
 
 - [Enterprise Leave & Asset Management System](enterprise-leave-asset-management/README.md): an Infosys-inspired FastAPI + React project with Admin, HR, and Employee RBAC; leave approvals; IT asset allocation; relational SQLAlchemy models; and pytest coverage.
 
+**Resume description:** Built an Infosys-style Enterprise Leave & Asset Management System using FastAPI, React, and SQLAlchemy, featuring Admin/HR/Employee RBAC, leave approval workflows, IT asset allocation, seeded demo users, and pytest-covered API flows.
+
 ### Run the featured app from GitHub
 
 ```bash

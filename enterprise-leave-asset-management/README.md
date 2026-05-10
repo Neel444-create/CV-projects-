@@ -2,6 +2,10 @@
 
 An Infosys-inspired enterprise portal for managing employee leave and IT hardware allocation through secure role-based workflows.
 
+## Resume description
+
+Built an Infosys-style Enterprise Leave & Asset Management System using FastAPI, React, and SQLAlchemy, featuring Admin/HR/Employee RBAC, leave approval workflows, IT asset allocation, seeded demo users, and pytest-covered API flows.
+
 ## Why this project fits Infosys-style enterprise engineering
 
 Infosys builds and maintains large internal and client-facing business platforms. This project demonstrates the same core capabilities at portfolio scale:
