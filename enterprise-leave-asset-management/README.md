@@ -18,7 +18,7 @@ Infosys builds and maintains large internal and client-facing business platforms
 - **Backend:** Python, FastAPI, SQLAlchemy, Pydantic
 - **Database:** SQLite for local demos; PostgreSQL/MySQL-ready via SQLAlchemy
 - **Security:** Password hashing, bearer-token authentication, RBAC dependencies
-- **Testing:** Pytest with isolated in-memory database
+- **Testing:** Pytest with isolated database setup
 - **Frontend:** React + Vite role-aware portal shell
 
 ## Roles
@@ -29,21 +29,21 @@ Infosys builds and maintains large internal and client-facing business platforms
 | HR | View employees, approve/reject leave requests |
 | Employee | View profile, apply for leave, track leave status, request IT assets |
 
-## Run from GitHub
+## Quick start from GitHub
 
-Use these steps after pushing this repository to GitHub, or after downloading it from someone else's GitHub account.
+These steps work after this project is pushed to GitHub or downloaded as a ZIP.
 
 ### Prerequisites
 
-Install these tools first:
+- Git
+- Python 3.11, 3.12, or 3.13 for the FastAPI backend
+- Node.js 18+ and npm for the React frontend
 
-- **Git** for cloning the repository.
-- **Python 3.11, 3.12, or 3.13** for the FastAPI backend. Python 3.14 is not recommended for this pinned dependency set.
-- **Node.js 18+ and npm** for the React frontend.
+> Python 3.14 is not recommended for this pinned dependency set.
 
 ### 1. Clone the repository
 
-Replace `<your-github-username>` with the GitHub account or organization that owns the repo.
+Replace `<your-github-username>` with the GitHub account or organization that owns the repository.
 
 ```bash
 git clone https://github.com/<your-github-username>/CV-projects-.git
@@ -72,11 +72,11 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
-Keep this terminal running. The backend will start at `http://127.0.0.1:8000`, and the interactive API docs will be available at `http://127.0.0.1:8000/docs`.
+Keep this terminal running. The backend starts at `http://127.0.0.1:8000`, and interactive API docs are available at `http://127.0.0.1:8000/docs`.
 
 ### 3. Start the React frontend
 
-Open a **second terminal** from the same project folder and run:
+Open a second terminal from the same project folder:
 
 ```bash
 cd frontend
@@ -88,11 +88,7 @@ Open the frontend URL printed by Vite, usually `http://127.0.0.1:5173` or `http:
 
 ### 4. Login with seeded demo accounts
 
-The API seeds Admin, HR, and Employee users automatically on first startup. Use the credentials below to test the role-based portal.
-
-## Seeded demo users
-
-The app creates demo users on first startup so reviewers can immediately test RBAC flows.
+The API seeds Admin, HR, and Employee users automatically on first startup.
 
 | Role | Email | Password |
 | --- | --- | --- |
@@ -124,6 +120,7 @@ The app creates demo users on first startup so reviewers can immediately test RB
 | `DATABASE_URL` | `sqlite:///./enterprise_portal.db` | SQLAlchemy database URL |
 | `ACCESS_TOKEN_EXPIRE_MINUTES` | `480` | Bearer token validity window |
 | `APP_NAME` | `Infosys Enterprise Leave & Asset Portal` | API display name |
+| `CORS_ORIGINS` | `http://127.0.0.1:5173,http://localhost:5173` | Allowed frontend origins |
 
 ## Test
 
