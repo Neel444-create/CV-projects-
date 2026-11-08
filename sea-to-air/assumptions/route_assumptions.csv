@@ -1,0 +1,4 @@
+route,distance_km,monthly_addressable_cargo_kg,urgency_score,existing_mode,ship_trip_cost_inr,air_trip_cost_inr,waterfly_trip_cost_inr,ship_payload_kg,air_payload_kg,waterfly_payload_kg,ship_transit_hours,air_transit_hours,waterfly_transit_hours,route_suitability_score,pilot_access_score,demand_score
+Chennai-Port Blair,1300,12000,4,Sea + air,180000,420000,95000,12000,1000,300,72,8,10,3,3,4
+Kochi-Lakshadweep,400,5000,5,Sea + limited air,85000,190000,52000,6000,500,300,30,5,4,4,3,3
+Mumbai-Offshore Installations,180,3500,5,Support vessel + helicopter,70000,160000,45000,2500,300,300,18,2,2,4,4,3
