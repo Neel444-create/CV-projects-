@@ -1,47 +1,37 @@
 # Sea-to-Air: Commercial Feasibility & Unit Economics
 
-A lightweight commercial assessment of autonomous sea-cargo transportation across three Indian routes. It compares conventional shipping, air freight and a proposed 300 kg autonomous sea-cargo service.
+Independent, lightweight commercial case study assessing whether a 300 kg-class autonomous sea-cargo service could serve urgent small shipments on selected Indian routes. Not affiliated with Waterfly.
 
-> Independent case study. Not affiliated with Waterfly. Starter values are illustrative placeholders, not verified Waterfly pricing, performance, customer demand or route approvals.
+> **Evidence discipline:** public connectivity facts are cited in `research/route_assessment.md`. Commercial rates, eligible shipment volumes and vehicle operating costs are not publicly verified in this project. The updated model intentionally leaves those inputs blank until customer quotes or operator data are obtained.
 
-## Routes
-1. Chennai–Port Blair: island supply chains and time-sensitive small cargo.
-2. Kochi–Lakshadweep: essential supplies, spares and urgent shipments.
-3. Mumbai–offshore installations: tools, spares and compact maintenance equipment.
+## Routes screened
+1. Chennai–Port Blair
+2. Kochi–Lakshadweep (must specify island endpoint)
+3. Mumbai offshore (must specify installation / transfer point)
 
-These are screening candidates, not confirmed operating routes. Suitability depends on actual range, payload, weather, permissions, infrastructure and customer demand.
+## Key preliminary finding
+Mumbai offshore is the leading **customer-discovery hypothesis**, not a proven economic winner or an approved operating route. Existing OSV/PSV and helicopter logistics mean the proposed service should target urgent, compact maintenance spares and complement incumbent operations.
 
-## Scope
-- Screen routes using distance, demand indicators, urgency and existing transport.
-- Compare ship, air freight and proposed autonomous service.
-- Model trip cost, cost/kg and customer savings.
-- Rank routes using a weighted score.
-- Outline a small measurable pilot.
+## Repository structure
+- `assumptions/route_assumptions.csv` — original illustrative inputs; do not cite as market facts.
+- `model/build_model.py` — initial model generator (starter version).
+- `research/research_framework.md` — research checklist.
+- `research/route_assessment.md` — evidence-based route screen.
+- `research/source_register.csv` — source register.
+- `deliverables/pilot_proposal.md` — pilot discussion draft.
+- `deliverables/consulting_deck_outline.md` — 10-slide storyline.
 
-Out of scope: vehicle engineering, navigation design, certification, detailed safety case, port operations and fleet scheduling.
+## Updated deliverables
+The current, source-aware Excel model, route feasibility report and PowerPoint deck are provided as downloadable attachments in the project conversation. The workbook separates public route evidence from commercial inputs and does not fabricate prices or shipment volumes.
 
-## Structure
-- `assumptions/route_assumptions.csv`: editable starter assumptions.
-- `model/build_model.py`: creates the Excel workbook.
-- `research/research_framework.md`: route research checklist.
-- `deliverables/pilot_proposal.md`: pilot discussion draft.
-
-## Run
-`pip install -r requirements.txt`
-`python model/build_model.py`
-
-Output: `deliverables/sea_to_air_unit_economics.xlsx`.
-
-## Core formulas
-- Cost/kg = trip cost / delivered payload (kg)
-- Customer savings = incumbent trip cost − proposed service trip cost
+## Commercial model logic
+- Incumbent cost/kg = incumbent trip cost / actual delivered kg
+- Proposed cost/kg = proposed trip cost / actual delivered kg
+- Savings per shipment = incumbent trip cost − proposed trip cost
 - Savings % = savings / incumbent trip cost
-- Weighted score = sum of criterion score × criterion weight
+- Monthly savings = savings per shipment × eligible monthly shipments
 
-Replace all starter values with sourced data before drawing conclusions. Compare like-for-like shipment weight, endpoints, handling and service scope. Record source URL, publication date, unit and access date.
+Use like-for-like shipment weight, handling, endpoints and service scope. Do not compare passenger fares with cargo rates or use port-wide tonnage as addressable demand for a 300 kg vehicle.
 
-## Suggested sources
-Port authorities and traffic reports; Ministry of Ports, Shipping and Waterways; Directorate General of Shipping; Airports Authority of India; Andaman & Nicobar and Lakshadweep administrations; offshore operator disclosures; and direct freight quotations.
-
-## Status
-Initial project scaffold. Research validation and final route selection are pending.
+## Pilot decision gates
+Confirm vehicle payload and range with reserve, weather envelope, permissions, safety-zone access, customer shipment profile, incumbent cost baseline and willingness to participate before proposing a paid pilot.
