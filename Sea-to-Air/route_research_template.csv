@@ -1,0 +1,4 @@
+route,customer_segment,cargo_examples,indicative_distance_km,estimated_monthly_cargo_kg,cargo_urgency,current_mode,door_to_door_time_hours,current_cost_per_trip_inr,current_cargo_per_trip_kg,source_url,source_date,confidence,notes
+Chennai-Port Blair,Island logistics operators,"essential supplies; spare parts",,,,,,,,,,,
+Kochi-Lakshadweep,Island administrations and logistics operators,"medicines; essential supplies; equipment",,,,,,,,,,,
+Mumbai-Offshore installations,Offshore oil and gas operators,"critical spares; tools; urgent equipment",,,,,,,,,,,
